@@ -1,0 +1,87 @@
+{
+    "name": "flutter-auto-import",
+    "displayName": "Flutter-Auto-Import",
+    "description": "auto import flutter's package",
+    "version": "0.0.1",
+    "publisher": "davidwoo",
+    "engines": {
+        "vscode": "^1.17.0"
+    },
+    "galleryBanner": {
+        "color": "#2d4794",
+        "theme": "dark"
+    },
+    "keywords": [
+        "flutter",
+        "dart",
+        "imports",
+        "require",
+        "auto import"
+    ],
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onLanguage:dart",
+        "onLanguage:flutter"
+    ],
+    "main": "./out/src/extension.js",
+    "contributes": {
+        "commands": [{
+            "command": "extension.flutterautoimport",
+            "title": "flutter's pacages Scan for imports"
+        }],
+        "configuration": {
+            "type": "object",
+            "title": "Auto Import configuration",
+            "properties": {
+                "autoimport.filesToScan": {
+                    "type": "string",
+                    "default": "**/*.{dart, dtmp}",
+                    "description": "Glob for files to watch and scan, e.g ./src/** ./src/app/**/*.ts. Defaults to **/*.{ts,tsx}"
+                },
+                "autoimport.showNotifications": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Specifies wether to show notifications from Auto Import"
+                },
+                "autoimport.doubleQuotes": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Specifies wether to use double quotes"
+                },
+                "autoimport.spaceBetweenBraces": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Specifies wether to use spaces between first and last brace"
+                },
+                "autoimport.autoComplete": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Adds found items to intellisense and automatically imports then"
+                },
+                "autoimport.useSemiColon": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Use ; at the end of a line e.g Import * from ./app or Import * from ./app; - Default True"
+                }
+            }
+        }
+    },
+    "icon": "icon.png",
+    "homepage": "https://github.com/yuezaixz/Flutter-Auto-Import",
+    "scripts": {
+        "vscode:prepublish": "tsc -p ./",
+        "compile": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.0.3",
+        "vscode": "^1.0.0",
+        "@types/node": "^6.0.40"
+    },
+    "dependencies": {
+        "lodash": "^4.13.1"
+    }
+}
