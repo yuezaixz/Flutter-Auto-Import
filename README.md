@@ -1,65 +1,39 @@
-# flutter-auto-import README
+# flutter-auto-import
 
-This is the README for your extension "flutter-auto-import". After writing up a brief description, we recommend including the following sections.
+flutter auto import packages extension.
 
-## Features
+## How to work
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Run the flutterautoimport command from the Command Palette (⇧⌘P)
 
-For example if there is an image subfolder under your extension project workspace:
+### Auto Import
 
-\!\[feature X\]\(images/feature-x.png\)
+Automatically finds files, add import line when your execute the Command Palette (⇧⌘P) and select packages.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Configuration
 
-## Requirements
+> filesToScan - Glob for which files in your workspace to scan, defaults to '**/*.{dart, d}'
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+> showNotifications - Controls if the annoying notifications should be shown, defaults to false
 
-## Extension Settings
+> doubleQuotes - Use double quotes rather than single
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+> spaceBetweenBraces - Difference between import {test} and import { test }
 
-For example:
+> useSemiColon - Use ; at the end of a line e.g Import * from ./app or Import * from ./app; - Default True
 
-This extension contributes the following settings:
+----
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
 
-## Known Issues
+## Changelog
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+### 0.0.1
+- Basic function, auto import select packages import in first line of current edit file .
 
-## Release Notes
+----
 
-Users appreciate release notes as you update your extension.
+## Todo
 
-### 1.0.0
+- auto make the imports formal
 
-Initial release of ...
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
